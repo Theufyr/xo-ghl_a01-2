@@ -1,0 +1,125 @@
+@import "reset.css";
+@font-face {
+  font-family: Main;
+  src: url(../assets/fonts/SpringSnowstorm.ttf);
+}
+:root {
+	/* Mobile-first */
+    font-size: 14px;
+    min-width: 320px;
+
+    /* Custom properties */
+    --color-01: #1f4714;
+    --color-02: #472300;
+
+    --background-01: #6ec755;
+    --background-02: #b5b39a;
+    --background-03: #55c7bc;
+    --background-04: #b291db;
+    --background-05: #79db5e;
+
+    
+    --shadow-01: -0.1rem 0.2rem 0.5rem rgb(0, 0, 0, 0.5);
+    --shadow-02: -0.1rem 0.2rem 0.3rem rgb(0, 0, 0, 0.5);
+    --shadow-03: 0rem 0.1rem 0.2rem rgb(0, 0, 0, 0.5);
+    --shadow-04: 0rem 0.1rem 0.2rem rgba(255, 255, 255, 0.5);
+
+    font-family: Main;
+    font-style: italic;
+    font-size: 1.2rem;
+    color: var(--color-01);
+    background-color: var(--background-01);
+}
+
+header, main {
+    width: 100%;
+    min-width: 320px;
+    text-align: center;
+}
+
+select, button, summary {
+    cursor:pointer;
+}
+
+button, select, input, textarea, section, article {
+    padding: 0.2rem;
+    background: linear-gradient(var(--background-02), var(--background-03));
+    outline: none;
+    box-shadow: var(--shadow-03);
+    border-radius: 0.5rem;
+}
+
+button, select, input, textarea {
+    width: 15rem;
+}
+
+button {
+    padding: 0.2rem 1rem;
+}
+
+button:hover {
+    background: linear-gradient(var(--background-02), var(--background-04));
+}
+
+#skills {
+    display:flex;
+    flex-wrap: wrap;
+    justify-items:center;
+    justify-content: center;
+    gap: 0.2rem;
+}
+
+#skills h2 {
+    width:100%;
+}
+
+section, article {
+    width: 90%;
+    margin: 0.5rem auto;
+    padding: 0.5rem;
+    background: linear-gradient(var(--background-05), var(--background-03));
+}
+
+article {
+    max-width: 30rem;
+    background: linear-gradient(var(--background-02), var(--background-04));
+}
+
+fieldset div {
+    padding: 0.2rem;
+}
+
+h1, h2, h3, legend, label, summary {
+    font-style: normal;
+    font-weight: bold;
+}
+h1 {
+    font-size:3rem;
+}
+h2, legend {
+    font-size:2rem;
+}
+h3 {
+    font-size:1.5rem;
+}
+
+#error {
+    color: var(--color-02);
+}
+
+/* Responsive */
+@media (min-width:768px) {
+    :root {
+        font-size: 16px;
+    }
+}
+@media (min-width:1024px) {
+    :root {
+        font-size: 18px;
+    }
+}
+@media (min-width:1280px) {
+    :root {
+        font-size: 20px;
+    }
+}

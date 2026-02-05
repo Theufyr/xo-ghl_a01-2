@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript : logique & DOM</title>
+    <link rel="stylesheet" href="src/styles/main.css" />
+    <script defer src="src/js/main.js" type="module"></script>
+  </head>
+  <body>
+    <header>
+        <h1>Compétences</h1>
+    </header>
+    <main>
+        <section>
+            <form id="form" action="/ajouter" method="POST">
+                <fieldset>
+                    <div>
+                        <legend>Ajouter une compétence</legend>
+                    </div>
+                    <div>
+                        <label for="theme">Thème auquel appartient cette compétence</label>
+                    </div>
+                    <div>
+                        <select id="theme" name="theme" required>
+                            <option value="" selected>Choisissez le thème</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="skill">Compétence</label>
+                    </div>
+                    <div>
+                        <input type="text" id="skill" name="skill" required>
+                    </div>
+                    <div>
+                        <label for="desc">Description</label>
+                    </div>
+                    <div>
+                        <textarea rows="2" id="desc" name="desc"></textarea>
+                    </div>
+                    <div id="error"></div>
+                </fieldset>
+                <button type="submit">Ajouter</button>
+            </form>
+        </section>
+        <section id="skills">
+        </section>
+    </main>
+    </body>
+</html>
