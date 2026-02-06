@@ -7,6 +7,7 @@
 	/* Mobile-first */
     font-size: 14px;
     min-width: 320px;
+    width: 100%;
 
     /* Custom properties */
     --color-01: #1f4714;
@@ -18,17 +19,18 @@
     --background-04: #b291db;
     --background-05: #79db5e;
 
-    
-    --shadow-01: -0.1rem 0.2rem 0.5rem rgb(0, 0, 0, 0.5);
-    --shadow-02: -0.1rem 0.2rem 0.3rem rgb(0, 0, 0, 0.5);
-    --shadow-03: 0rem 0.1rem 0.2rem rgb(0, 0, 0, 0.5);
-    --shadow-04: 0rem 0.1rem 0.2rem rgba(255, 255, 255, 0.5);
+    --shadow-01: 0rem 0.1rem 0.2rem rgb(0, 0, 0, 0.5);
 
     font-family: Main;
     font-style: italic;
-    font-size: 1.2rem;
     color: var(--color-01);
     background-color: var(--background-01);
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-size: 1.2rem;
 }
 
 header, main {
@@ -45,7 +47,7 @@ button, select, input, textarea, section, article {
     padding: 0.2rem;
     background: linear-gradient(var(--background-02), var(--background-03));
     outline: none;
-    box-shadow: var(--shadow-03);
+    box-shadow: var(--shadow-01);
     border-radius: 0.5rem;
 }
 
@@ -75,7 +77,7 @@ button:hover {
 
 section, article {
     width: 90%;
-    margin: 0.5rem auto;
+    margin: 1rem auto;
     padding: 0.5rem;
     background: linear-gradient(var(--background-05), var(--background-03));
 }
@@ -89,9 +91,15 @@ fieldset div {
     padding: 0.2rem;
 }
 
-h1, h2, h3, legend, label, summary {
+ul {
+    margin-left: 2rem;
+    text-align: left;
+}
+
+h1, h2, h3, legend, label, summary, button {
     font-style: normal;
     font-weight: bold;
+    letter-spacing: 0.05rem;
 }
 h1 {
     font-size:3rem;

@@ -1,0 +1,72 @@
+@import "reset.css";
+@font-face {
+  font-family: Main;
+  src: url(../assets/fonts/SpringSnowstorm.ttf);
+}
+:root {
+	/* Mobile-first */
+    font-size: 14px;
+    min-width: 320px;
+    width: 100%;
+
+    /* Custom properties */
+    --color-01: #4d4720;
+    --color-02: #9c4e00;
+
+    --background-01: #c7b855;
+    --background-02: #fbe65d;
+    --background-03: #cd6701e0;
+
+    --shadow-01: 0rem 0.1rem 0.2rem rgb(0, 0, 0, 0.5);
+
+    font-family: Main;
+    font-weight: bold;
+    letter-spacing: 0.05rem;
+    color: var(--color-01);
+    background-color: var(--background-01);
+    text-align: center;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-size: 1.2rem;
+}
+
+a:any-link {
+    color: var(--color-02);
+}
+a:hover {
+    color: var(--color-01);
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+article {
+    max-width: 20rem;
+    margin: 1rem auto;
+    padding: 0.5rem;
+    background: linear-gradient(var(--background-02), var(--background-03));
+    box-shadow: var(--shadow-01);
+    border-radius: 0.5rem;
+}
+
+/* Responsive */
+@media (min-width:768px) {
+    :root {
+        font-size: 16px;
+    }
+}
+@media (min-width:1024px) {
+    :root {
+        font-size: 18px;
+    }
+}
+@media (min-width:1280px) {
+    :root {
+        font-size: 20px;
+    }
+}

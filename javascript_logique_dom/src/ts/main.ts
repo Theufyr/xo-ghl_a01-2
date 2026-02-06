@@ -3,7 +3,7 @@ import { createNode } from './createNode.js';
 
 // CREATION LISTE DES THEMES & SKILLS
 // on cible la section skills
-const section = document.getElementById("skills");
+const section: HTMLElement = document.getElementById("skills")!;
 // si des thèmes sont présents, on prépare la section
 if (themes.length !== 0) {
     const skillsTitle = createNode({type:"h2", content:"Liste des compétences", id:"", childs:[]});
@@ -13,7 +13,7 @@ if (themes.length !== 0) {
 
         // on en profite pour préparer la liste des thèmes à proposer dans le formulaire
         const themeList = createNode({type:"option", content:theme.name, id:themeIndex, childs:[]});
-        const themeSelect = document.getElementById("theme");
+        const themeSelect: HTMLElement = document.getElementById("theme")!;
         themeSelect.appendChild(themeList);
 
         // objet contenant les définitions des éléments de thèmes à créer
@@ -83,11 +83,11 @@ if (themes.length !== 0) {
 }
 
 // GESTION DU FORMULAIRE
-const formBlock = document.getElementById("form");
-const formSelect = document.getElementById("theme");
-const formInput = document.getElementById("skill");
-const formTextarea = document.getElementById("desc");
-const formError = document.getElementById("error");
+const formBlock: HTMLElement = document.getElementById("form")!;
+const formSelect = <HTMLSelectElement>document.getElementById("theme");
+const formInput = <HTMLInputElement>document.getElementById("skill");
+const formTextarea = <HTMLTextAreaElement>document.getElementById("desc");
+const formError: HTMLElement = document.getElementById("error")!;
 
 formBlock.addEventListener('submit', (target) => {
 	target.preventDefault();
@@ -102,7 +102,8 @@ formBlock.addEventListener('submit', (target) => {
     let errorDisplay = errorMessage.join(" ");
 
     if (errorDisplay === "") {
-        if (document.getElementById(formSelect.value)) {
+        const skillList = document.getElementById(formSelect.value);
+        if (skillList !== null) {
             const newSkill = {
                 type: "li",
                 content: "",
@@ -130,7 +131,7 @@ formBlock.addEventListener('submit', (target) => {
                 ]
             };
             const addedSkill = createNode(newSkill);
-            document.getElementById(formSelect.value).appendChild(addedSkill);
+            skillList.appendChild(addedSkill);
         } else {
             errorDisplay = "Thème non trouvé";
         }
